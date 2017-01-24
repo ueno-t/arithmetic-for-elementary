@@ -13,21 +13,13 @@ import org.junit.Test;
 public class CommonDivisionTest {
 
 	@Test
-	public void testStack() {
-		CommonDivision tuple = new CommonDivision(Arrays.asList(12,30,24), Mode.GCD);
-		tuple.stack();
-		assertThat(tuple.getLastValue(),is(Arrays.asList(2,5,4)));
-	}
-	@Test
 	public void testGCD() {
 		CommonDivision tuple = new CommonDivision(Arrays.asList(12,30,24), Mode.GCD);
-		tuple.stack();
 		assertThat(tuple.getGCD(),is(6));
 	}
 	@Test
 	public void testLCM() {
 		CommonDivision tuple = new CommonDivision(Arrays.asList(12,30,24), Mode.LCM);
-		tuple.stack();
 		assertThat(tuple.getLCM(),is(120));
 	}
 	@Test

@@ -31,11 +31,12 @@ public class CommonDivision {
 		this.stack = new ArrayDeque<>();
 		this.stack.add(new Pair<>(1, intList));
 		this.mode = mode;
+		stack();
 	}
 	/**
 	 * スタック積み上げ
 	 */
-	void stack() {
+	private void stack() {
 		List<Integer> intList = getLastValue();
 		Integer divisor = primeFactory(intList);
 		if (1 < divisor) {
@@ -47,7 +48,7 @@ public class CommonDivision {
 	 * スタックの最後の整数リストを返却する。
 	 * @return 最終の整数リスト
 	 */
-	List<Integer> getLastValue() {
+	private List<Integer> getLastValue() {
 		return this.stack.getLast().getValue();
 	}
 	/**
@@ -69,7 +70,7 @@ public class CommonDivision {
 	 * @return 除数の乗算結果
 	 */
 	Integer reduceDivisor() {
-		return stack.stream().map(p -> p.getKey()).reduce(1, (x, y) -> x * y);
+		return stack.stream().map(Pair::getKey).reduce(1, (x, y) -> x * y);
 	}
 	/**
 	 * 約数を返却する。
