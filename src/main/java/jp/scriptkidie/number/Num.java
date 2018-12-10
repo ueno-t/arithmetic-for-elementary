@@ -53,8 +53,8 @@ public class Num extends Number {
 		return Num.of(this.doubleValue() / divisor.doubleValue());
 	}
 
-	private static Num of(double d) {
-		return new Num(Double.toString(d));
+	public Num pow(double exponent) {
+		return Num.of(Math.pow(this.doubleValue(), exponent));
 	}
 
 	public static Num of(Number n) {
@@ -62,14 +62,11 @@ public class Num extends Number {
 		return new Num(d.toString());
 	}
 
-	public Num pow(double exponent) {
-		return Num.of(Math.pow(this.doubleValue(), exponent));
-	}
-
 	@Override
 	public boolean equals(Object o) {
 		return this.val.equals(((Num) o).val);
 	}
+
 	@Override
 	public int hashCode() {
 		return val.hashCode();
