@@ -19,7 +19,7 @@ public class RightAngleIsoscelesTriangleTest {
 
 	/**
 	 * <li>事前条件：底辺と高さが設定されている
-	 * <li>事後条件；底辺と高さから面積を求めている
+	 * <li>事後条件；底辺と高さから面積を求めていること
 	 */
 	@Test
 	public void testArea_withBottomHeight() {
@@ -30,7 +30,7 @@ public class RightAngleIsoscelesTriangleTest {
 
 	/**
 	 * <li>事前条件：底辺以外の辺が設定されている
-	 * <li>事後条件；底辺以外の辺から面積を求めている
+	 * <li>事後条件；底辺以外の辺から面積を求めていること
 	 */
 	@Test
 	public void testArea_withOther() {
@@ -40,7 +40,7 @@ public class RightAngleIsoscelesTriangleTest {
 
 	/**
 	 * <li>事前条件：底辺が設定されている
-	 * <li>事後条件；底辺から面積を求めている
+	 * <li>事後条件；底辺から面積を求めていること
 	 */
 	@Test
 	public void testArea_withBottom() {
@@ -49,8 +49,8 @@ public class RightAngleIsoscelesTriangleTest {
 	}
 
 	/**
-	 * <li>事前条件：底辺が設定されている
-	 * <li>事後条件；底辺から面積を求めている
+	 * <li>事前条件：辺が設定されていない
+	 * <li>事後条件；算術例外
 	 */
 	@Test(expected = ArithmeticException.class)
 	public void testArea_withoutAny() {

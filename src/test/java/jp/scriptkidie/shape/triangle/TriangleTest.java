@@ -17,8 +17,8 @@ public class TriangleTest {
 	}
 
 	/**
-	 * <li>事前条件：底辺３、高さ４
-	 * <li>事後条件：面積６
+	 * <li>事前条件：底辺と高さが設定されている
+	 * <li>事後条件：底辺と高さから面積を求めていること
 	 */
 	@Test
 	public void testArea() {

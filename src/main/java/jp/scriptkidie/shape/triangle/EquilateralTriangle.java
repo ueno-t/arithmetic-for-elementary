@@ -2,6 +2,7 @@ package jp.scriptkidie.shape.triangle;
 
 import jp.scriptkidie.number.Num;
 import jp.scriptkidie.shape.SideList;
+import lombok.Setter;
 
 /**
  * 正三角形.
@@ -9,10 +10,10 @@ import jp.scriptkidie.shape.SideList;
  * @author UENO, Toshiyuki.
  *
  */
-public class EquilateralTriangle implements Triangle {
+public class EquilateralTriangle implements Equilateral {
 
 	private SideList sides;
-	private Number height;
+	@Setter private Number height;
 
 	/**
 	 * 辺の長さで三角形を作成する.
@@ -32,15 +33,6 @@ public class EquilateralTriangle implements Triangle {
 	 */
 	boolean isValid() {
 		return (sides.number() == 3) && (sides.sameAll());
-	}
-
-	/**
-	 * 高さ.
-	 * 
-	 * @param height 高さ
-	 */
-	public void setHeight(Number height) {
-		this.height = height;
 	}
 
 	/**

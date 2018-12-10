@@ -19,8 +19,8 @@ public class EquilateralTriangleTest {
 	}
 
 	/**
-	 * <li>事前条件：１辺長：１５
-	 * <li>事後条件：周辺長：４５
+	 * <li>事前条件：1辺長の設定あり
+	 * <li>事後条件：周辺長が1辺長 × 3 であること
 	 */
 	@Test
 	public void testPerimeter() {
@@ -29,7 +29,7 @@ public class EquilateralTriangleTest {
 
 	/**
 	 * <li>事前条件：高さ設定あり
-	 * <li>事後条件：高さ：１２
+	 * <li>事後条件：設定された高さが取得できること
 	 */
 	@Test
 	public void testHeight() {

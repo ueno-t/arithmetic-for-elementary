@@ -4,7 +4,7 @@ import jp.scriptkidie.number.Num;
 import jp.scriptkidie.shape.SideList;
 import lombok.Setter;
 
-public class RightAngleIsoscelesTriangle implements RightTriangle, IsoscelesTriangle {
+public class RightAngleIsoscelesTriangle implements Right, Isosceles {
 
 	SideList sides;
 	/** 底辺の長さ */
@@ -43,8 +43,8 @@ public class RightAngleIsoscelesTriangle implements RightTriangle, IsoscelesTria
 	 * 下記の順番で処理を試みる.
 	 * <ol>
 	 * <li>底辺 × 高さ ÷ 2
-	 * <li>底辺以外の長さ^2 / 2
-	 * <li>底辺の長さ        ^2 / 4
+	 * <li>底辺以外の長さ ^2 / 2
+	 * <li>底辺の長さ         ^2 / 4
 	 * </ol>
 	 */
 	@Override
