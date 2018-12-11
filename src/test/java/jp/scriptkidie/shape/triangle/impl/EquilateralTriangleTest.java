@@ -1,4 +1,4 @@
-package jp.scriptkidie.shape.triangle;
+package jp.scriptkidie.shape.triangle.impl;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import jp.scriptkidie.number.Num;
 import jp.scriptkidie.shape.SideList;
+import jp.scriptkidie.shape.triangle.impl.EquilateralTriangle;
 
 public class EquilateralTriangleTest {
 

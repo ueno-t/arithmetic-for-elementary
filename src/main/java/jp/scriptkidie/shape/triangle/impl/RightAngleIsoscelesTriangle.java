@@ -1,7 +1,9 @@
-package jp.scriptkidie.shape.triangle;
+package jp.scriptkidie.shape.triangle.impl;
 
 import jp.scriptkidie.number.Num;
 import jp.scriptkidie.shape.SideList;
+import jp.scriptkidie.shape.triangle.Isosceles;
+import jp.scriptkidie.shape.triangle.Right;
 import lombok.Setter;
 
 public class RightAngleIsoscelesTriangle extends AbstractTriangle implements Right, Isosceles {

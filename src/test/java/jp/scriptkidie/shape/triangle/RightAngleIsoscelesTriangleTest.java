@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import jp.scriptkidie.number.Num;
+import jp.scriptkidie.shape.triangle.impl.RightAngleIsoscelesTriangle;
 
 public class RightAngleIsoscelesTriangleTest {
 

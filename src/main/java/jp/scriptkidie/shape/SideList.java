@@ -47,6 +47,10 @@ public class SideList {
 	public Number c() {
 		return sides.get(2);
 	}
+	/** 辺dを取得する. */
+	public Number d() {
+		return sides.get(3);
+	}
 
 	/**
 	 * すべての辺に同一の値が設定されている？
@@ -56,4 +60,5 @@ public class SideList {
 	public boolean sameAll() {
 		return sides.stream().map(s -> Num.of(s)).distinct().count() == 1;
 	}
+
 }

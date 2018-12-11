@@ -1,8 +1,9 @@
-package jp.scriptkidie.shape.triangle;
+package jp.scriptkidie.shape.triangle.impl;
 
 import java.util.Optional;
 
 import jp.scriptkidie.shape.SideList;
+import jp.scriptkidie.shape.triangle.Triangle;
 import lombok.Setter;
 
 /**
@@ -11,7 +12,7 @@ import lombok.Setter;
  * @author UENO, Toshiyuki.
  *
  */
-public class AbstractTriangle implements Triangle {
+public abstract class AbstractTriangle implements Triangle {
 
 	protected SideList sides;
 	@Setter protected Number bottom;

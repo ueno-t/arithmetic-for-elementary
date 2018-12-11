@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import jp.scriptkidie.number.Num;
 import jp.scriptkidie.shape.SideList;
+import jp.scriptkidie.shape.triangle.impl.AbstractTriangle;
 
 public class TriangleTest {
 

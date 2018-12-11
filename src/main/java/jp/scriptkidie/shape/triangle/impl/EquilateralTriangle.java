@@ -1,9 +1,11 @@
-package jp.scriptkidie.shape.triangle;
+package jp.scriptkidie.shape.triangle.impl;
 
 import java.util.Optional;
 
 import jp.scriptkidie.number.Num;
 import jp.scriptkidie.shape.SideList;
+import jp.scriptkidie.shape.triangle.Equilateral;
+import jp.scriptkidie.shape.triangle.Triangle;
 
 /**
  * 正三角形.
@@ -30,6 +32,7 @@ public class EquilateralTriangle extends AbstractTriangle implements Equilateral
 	 */
 	@Override
 	public Number perimeter() {
+		if (sides.number() == Triangle.NUMBER_OF_SIDES) return Equilateral.super.area();
 		return Num.of(sides.a()).mul(3);
 	}
 
@@ -39,6 +42,7 @@ public class EquilateralTriangle extends AbstractTriangle implements Equilateral
 	 */
 	@Override
 	public Optional<Number> bottom() {
+		if (bottom != null) return Optional.ofNullable(bottom);
 		return Optional.of(sides.a());
 	}
 

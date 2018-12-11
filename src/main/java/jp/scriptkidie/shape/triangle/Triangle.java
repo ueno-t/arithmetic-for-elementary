@@ -15,6 +15,7 @@ public interface Triangle extends Shape {
 
 	/** 三角形の内角の和 */
 	Number SUM_OF_INTERNAL_ANGLES = Num.of(180);
+	int NUMBER_OF_SIDES = 3;
 
 	/**
 	 * 底辺を取得する.
