@@ -1,5 +1,7 @@
 package jp.scriptkidie.shape.triangle;
 
+import java.util.Optional;
+
 import jp.scriptkidie.number.Num;
 import jp.scriptkidie.shape.SideList;
 
@@ -18,7 +20,7 @@ public class EquilateralTriangle extends AbstractTriangle implements Equilateral
 	 * @param sides 辺
 	 */
 	EquilateralTriangle(SideList sides) {
-		if (sides.number() < 1) throw new ArithmeticException("正三角形は少なくとも１辺の定義が必要です.");
+		if (sides.number() < 1) throw new ArithmeticException("正三角形は少なくとも1辺の定義が必要です.");
 		this.sides = sides;
 	}
 
@@ -32,12 +34,12 @@ public class EquilateralTriangle extends AbstractTriangle implements Equilateral
 	}
 
 	/**
-	 * [{@inheritDoc}
+	 * {@inheritDoc}
 	 * 正三角形の底辺は任意の1辺である.
 	 */
 	@Override
-	public Number bottom() {
-		return sides.a();
+	public Optional<Number> bottom() {
+		return Optional.of(sides.a());
 	}
 
 }

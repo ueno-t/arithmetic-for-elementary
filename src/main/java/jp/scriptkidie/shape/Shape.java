@@ -9,22 +9,21 @@ package jp.scriptkidie.shape;
 public interface Shape {
 
 	/**
-	 * 図形を構成する辺の集合.
-	 * 問題の構成要件に従属するため、閉路になっていることやすべての辺が完備していることを保証しない.
+	 * 図形を構成する辺長の集合を取得する.
 	 * 
-	 * @return 辺
+	 * @return 辺長の集合
 	 */
 	SideList sides();
 
 	/**
-	 * 周辺長.
+	 * 周辺長を取得する.
 	 * 
 	 * @return 周辺長
 	 */
 	Number perimeter();
 
 	/**
-	 * 面積.
+	 * 面積を取得する.
 	 * 
 	 * @return 面積
 	 */

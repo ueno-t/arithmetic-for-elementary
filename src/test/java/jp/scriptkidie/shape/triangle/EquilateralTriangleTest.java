@@ -33,7 +33,7 @@ public class EquilateralTriangleTest {
 	 */
 	@Test
 	public void testBottom() {
-		assertThat(actual.bottom(), is(Num.of(15.0)));
+		assertThat(actual.bottom().get(), is(Num.of(15.0)));
 	}
 
 	/**
@@ -44,15 +44,6 @@ public class EquilateralTriangleTest {
 	public void testHeight() {
 		actual.setHeight(Num.of(12.0));
 		assertThat(actual.height().get(), is(Num.of(12.0)));
-	}
-
-	/**
-	 * <li>事前条件：高さ設定なし
-	 * <li>事後条件：算術例外
-	 */
-	@Test(expected = ArithmeticException.class)
-	public void testHeight_withoutsetting() {
-		actual.height();
 	}
 
 	/**

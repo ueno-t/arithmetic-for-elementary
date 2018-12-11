@@ -24,18 +24,13 @@ public class AbstractTriangle implements Triangle {
 	}
 
 	@Override
-	public Number bottom() {
-		return bottom;
+	public Optional<Number> bottom() {
+		return Optional.ofNullable(bottom);
 	}
 
-	/**
-	 * {@inheritDoc}
-	 * 小学算数では高さは与えられるものとする.
-	 */
 	@Override
 	public Optional<Number> height() {
-		if (height == null) throw new ArithmeticException("高さが与えられていません.");
-		return Optional.of(height);
+		return Optional.ofNullable(height);
 	}
 
 }
