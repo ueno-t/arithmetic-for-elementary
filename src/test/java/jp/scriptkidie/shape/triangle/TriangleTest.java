@@ -7,13 +7,15 @@ import org.junit.Before;
 import org.junit.Test;
 
 import jp.scriptkidie.number.Num;
+import jp.scriptkidie.shape.SideList;
 
 public class TriangleTest {
 
 	ConcreatTriangle actual;
+
 	@Before
 	public void setup() {
-		actual = new ConcreatTriangle();
+		actual = new ConcreatTriangle(new SideList("1","2","3"));
 	}
 
 	/**
@@ -22,12 +24,21 @@ public class TriangleTest {
 	 */
 	@Test
 	public void testArea() {
-		assertThat(actual.area(), is(Num.of(6.0)));
+		actual.setBottom(6);
+		actual.setHeight(4);
+		assertThat(actual.area(), is(Num.of(12.0)));
 	}
 
-	class ConcreatTriangle implements Triangle {
-		@Override public Number perimeter() {return 12;}
-		@Override public Number bottom() {return 3;}
-		@Override public Number height() {return 4;}
+	/**
+	 * <li>事前条件：3辺が設定されている
+	 * <li>事後条件：3辺から周辺長を求めていること
+	 */
+	@Test
+	public void testPerimeter() {
+		assertThat(actual.perimeter(), is(Num.of(6.0)));
+	}
+
+	class ConcreatTriangle extends AbstractTriangle implements Triangle {
+		ConcreatTriangle(SideList sides) { super.sides = sides; }
 	}
 }

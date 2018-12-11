@@ -36,15 +36,15 @@ public class SideList {
 	}
 
 	/** 初めの辺（一般に「辺a」とされる）を取得する. */
-	public Number first() {
+	public Number a() {
 		return sides.get(0);
 	}
 	/**辺bを取得する. */
-	public Number second() {
+	public Number b() {
 		return sides.get(1);
 	}
 	/** 辺cを取得する. */
-	public Number third() {
+	public Number c() {
 		return sides.get(2);
 	}
 

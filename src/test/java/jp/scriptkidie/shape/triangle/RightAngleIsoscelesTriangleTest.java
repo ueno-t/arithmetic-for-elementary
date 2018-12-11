@@ -56,4 +56,15 @@ public class RightAngleIsoscelesTriangleTest {
 	public void testArea_withoutAny() {
 		actual.area();
 	}
+	
+	/**
+	 * <li>事前条件：底辺と底辺以外が設定されている
+	 * <li>事後条件；底辺と底辺以外から周辺長が求められること
+	 */
+	@Test
+	public void testPerimeter() {
+		actual.setBottom(6);
+		actual.setOther(4);
+		assertThat(actual.perimeter(), is(Num.of(14)));
+	}
 }
