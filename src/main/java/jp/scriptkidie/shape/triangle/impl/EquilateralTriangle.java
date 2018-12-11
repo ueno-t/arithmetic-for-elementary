@@ -32,7 +32,7 @@ public class EquilateralTriangle extends AbstractTriangle implements Equilateral
 	 */
 	@Override
 	public Number perimeter() {
-		if (sides.number() == Triangle.NUMBER_OF_SIDES) return Equilateral.super.area();
+		if (sides.number() == Triangle.NUMBER_OF_SIDES) return Equilateral.super.perimeter();
 		return Num.of(sides.a()).mul(3);
 	}
 

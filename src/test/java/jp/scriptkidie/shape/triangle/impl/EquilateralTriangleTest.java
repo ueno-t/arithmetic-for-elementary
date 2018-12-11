@@ -29,12 +29,32 @@ public class EquilateralTriangleTest {
 	}
 
 	/**
+	 * <li>事前条件：3辺長の設定あり
+	 * <li>事後条件：周辺長が3辺長から導出されていること
+	 */
+	@Test
+	public void testPerimeter_useSides() {
+		actual = new EquilateralTriangle(new SideList("2.0", "3.0", "3.0"));
+		assertThat(actual.perimeter(), is(Num.of(8.0)));
+	}
+
+	/**
 	 * <li>事前条件：底辺設定なし
 	 * <li>事後条件：1辺長が底辺として取得できること
 	 */
 	@Test
 	public void testBottom() {
 		assertThat(actual.bottom().get(), is(Num.of(15.0)));
+	}
+
+	/**
+	 * <li>事前条件：底辺設定なし
+	 * <li>事後条件：1辺長が底辺として取得できること
+	 */
+	@Test
+	public void testBottom_useBottom() {
+		actual.setBottom(Num.of(7.0));
+		assertThat(actual.bottom().get(), is(Num.of(7.0)));
 	}
 
 	/**
