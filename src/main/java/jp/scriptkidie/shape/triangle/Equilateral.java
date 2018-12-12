@@ -19,7 +19,7 @@ public interface Equilateral extends Triangle, RegularPolygon {
 	 * @return 真：正三角形である、偽：正三角形でない
 	 */
 	default boolean isValid() {
-		return (sides().number() == 3) && (sides().sameAll());
+		return (sides().number() == Triangle.NUMBER_OF_SIDES) && (sides().sameAll());
 	}
 
 }
