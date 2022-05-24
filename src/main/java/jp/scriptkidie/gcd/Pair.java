@@ -2,6 +2,9 @@ package jp.scriptkidie.gcd;
 
 import java.util.AbstractMap;
 
+/**
+ * Pair.
+ */
 public class Pair<K, V> extends AbstractMap.SimpleEntry<K, V> {
     /** serialVersionUID. */
     private static final long serialVersionUID = 6411527075103472113L;
