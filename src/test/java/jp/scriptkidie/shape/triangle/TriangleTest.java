@@ -59,7 +59,7 @@ public class TriangleTest {
 		actual.area();
 	}
 
-	class ConcreatTriangle extends AbstractTriangle implements Triangle {
+	class ConcreatTriangle extends AbstractTriangle {
 		ConcreatTriangle(SideList sides) { super.sides = sides; }
 	}
 }
