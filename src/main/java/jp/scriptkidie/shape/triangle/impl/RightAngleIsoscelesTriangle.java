@@ -31,7 +31,7 @@ public class RightAngleIsoscelesTriangle extends AbstractTriangle implements Rig
 	 * <ol>
 	 * <li>底辺 × 高さ ÷ 2
 	 * <li>底辺以外の長さ ^2 / 2
-	 * <li>底辺の長さ         ^2 / 4
+	 * <li>底辺の長さ ^2 / 4
 	 * </ol>
 	 */
 	@Override
