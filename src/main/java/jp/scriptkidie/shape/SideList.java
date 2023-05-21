@@ -25,7 +25,7 @@ public class SideList {
 	public SideList(String... s) {
 		this.sides = Arrays.stream(s).map(str -> new Num(str)).collect(Collectors.toList());
 	}
-
+ 
 	/**
 	 * 辺の数.
 	 * 
